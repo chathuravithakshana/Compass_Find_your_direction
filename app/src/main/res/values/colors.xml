@@ -40,4 +40,8 @@
     <color name="teal">#008080</color>
     <color name="teal_700">#007070</color>
     <color name="black">#000000</color>
+
+    <!--For Normal/Light mode-->
+    <color name="backgroundColor">#E7E7E7</color>
+    <color name="textColor">#000000</color>
 </resources>

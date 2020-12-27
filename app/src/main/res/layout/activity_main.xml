@@ -1,48 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundColor">
 
     <RelativeLayout
+        android:layout_weight=".2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E7E7E7" >
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/txt_heading"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginTop="20dp"
             android:text="@string/app_heading"
             android:textSize="20sp"
-            android:textColor="@color/colorBlueJeansDark"
+            android:textColor="@color/textColor"
             android:textStyle="normal|bold" />
 
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_toggle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/txt_heading">
+        </ToggleButton>
+
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="580dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/img_compass"
             android:layout_below="@+id/txt_heading"
             android:layout_centerHorizontal="true"
             android:src="@drawable/compass_image" />
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight=".7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ad_view_bottom"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@id/img_compass"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-1418713931658974/8339471512">
-        </com.google.android.gms.ads.AdView>
+            android:id="@+id/txt_location"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/location_text"
+            android:textSize="12sp"
+            android:textColor="@color/textColor"
+            android:textStyle="normal|bold"
+            android:background="@color/colorGrass"/>
 
     </RelativeLayout>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_weight=".8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ad_view_bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

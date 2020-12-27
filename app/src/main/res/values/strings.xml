@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Compass - Find your direction</string>
     <string name="app_heading">Compass - Find your direction</string>
+    <string name="location_text">Where are you ?</string>
 </resources>
