@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HowtoCalibrate"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:weightSum="100">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/img_calibrate"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/compass_calibration"
+        android:layout_weight="50"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/txt_calibrate"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/txt_calibration"
+        android:textSize="18sp"
+        android:textColor="@color/textColor"
+        android:textStyle="normal|bold"
+        android:justificationMode="inter_word"
+        tools:targetApi="o"
+        android:scrollbars="vertical"
+        android:layout_weight="50"/>
+
+</LinearLayout>

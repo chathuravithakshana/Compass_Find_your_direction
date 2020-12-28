@@ -1,5 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Compass - Find your direction</string>
     <string name="app_heading">Compass - Find your direction</string>
     <string name="location_text">Where are you ?</string>
+    <string name="txt_calibration">If you feel the directions are not accurate, then you must perform a manual calibration. While holding your device and following the method shown on-screen, move your phone around three times, tracing a figure eight in the process. If the calibration process was a success, the direction accuracy should be improved.</string>
+    <string name="menu_calibrate">How to Calibrate ?</string>
+    <string name="menu_about">About Us</string>
+    <string name="app_name_calibrate">How to Calibrate ?</string>
+    <string name="app_name_about">About Us</string>
+    <string name="txt_about">Hello there! I\'m Chathura, a Computer Science graduate from University of Kelaniya. I\'m building Native Android applications for fun and gain. \n\nUsers can use this app to find the direction while you\'re travelling. It is recommended to calibrate your device before using this application. Instructions can be found in the \"How to Use ?\" page. In addition to that there are few added features; Dark/Light mode switch and Location display. Another interesting features will be added in the due course. Stay tuned! \n\nIf you wish to contact me, please use below contact details. Thank you. Stay Safe!</string>
 </resources>

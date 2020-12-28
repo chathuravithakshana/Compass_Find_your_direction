@@ -8,24 +8,38 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CompassFindYourDirection"
-        android:hardwareAccelerated="true">
+        android:theme="@style/Theme.CompassFindYourDirection">
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/app_name_about"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".HowtoCalibrate"
+            android:label="@string/app_name_calibrate"
+            android:screenOrientation="portrait">
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1418713931658974~5010600597"/>
+            android:value="ca-app-pub-1418713931658974~5010600597" />
+
         <activity
             android:name=".MainActivity"
-            android:hardwareAccelerated="true">
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service android:name=".GetaddressIntentService" />
     </application>
 

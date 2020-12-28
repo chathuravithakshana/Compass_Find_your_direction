@@ -3,6 +3,7 @@ package com.darkilluminate.compass_findyourdirection;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -21,6 +22,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -230,6 +233,30 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                         }
                     }
                 });
+    }
+
+    //Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.item_calibrate:
+                Intent intentCalibrate = new Intent(this, HowtoCalibrate.class);
+                startActivity(intentCalibrate);
+                return true;
+            case R.id.item_about:
+                Intent intentAbout = new Intent(this, AboutUs.class);
+                startActivity(intentAbout);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

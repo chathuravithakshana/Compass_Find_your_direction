@@ -1,83 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/backgroundColor">
+    android:background="@color/backgroundColor"
+    android:weightSum="100">
 
-    <RelativeLayout
-        android:layout_weight=".2"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:id="@+id/txt_heading"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_heading"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:textStyle="normal|bold"
+        android:layout_weight="5"
+        android:layout_gravity="center"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/txt_heading"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/app_heading"
-            android:textSize="20sp"
-            android:textColor="@color/textColor"
-            android:textStyle="normal|bold" />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/btn_toggle"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:layout_weight="7">
+    </ToggleButton>
 
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_toggle"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
-            android:layout_below="@+id/txt_heading">
-        </ToggleButton>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/img_compass"
-            android:layout_below="@+id/txt_heading"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/compass_image" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_weight=".7"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:id="@+id/img_compass"
+        android:src="@drawable/compass_image"
+        android:layout_gravity="center"
+        android:layout_weight="58"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/txt_location"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/location_text"
-            android:textSize="12sp"
-            android:textColor="@color/textColor"
-            android:textStyle="normal|bold"
-            android:background="@color/colorGrass"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/txt_location"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/location_text"
+        android:textSize="12sp"
+        android:textColor="@color/textColor"
+        android:textStyle="normal|bold"
+        android:background="@color/colorGrass"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:layout_weight="20"/>
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_weight=".8"
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:id="@+id/ad_view_bottom"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1418713931658974/8339471512"
+        android:layout_weight="10"/>
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/ad_view_bottom"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
-    </RelativeLayout>
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
